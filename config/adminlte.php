@@ -317,17 +317,33 @@ return [
         ],
         [
             'text' => 'Cost Manage',
-            'icon' => 'fas fa-fw fa-invoice',
+            'icon' => 'fas fa-fw fa-user',
             'submenu' => [
                 [
-                    'text' => 'level_one',
+                    'text' => 'Manage Cost',
                     'url' => '#',
                 ],
                 [
-                    'text' => 'level_one',
+                    'text' => 'Mange Loan & Earn',
                     'url' => '#',
                 ],
+
             ],
+        ],
+        [
+            'text' => 'Report',
+            'icon' => 'fa fa-report',
+            'submenu' => [
+                [
+                    'text' => 'Month wise Report',
+                    'url' => '#',
+                ],
+                [
+                    'text' => 'Year wise Report',
+                    'url' => '#',
+                ]
+            ],
+
         ],
     ],
 
