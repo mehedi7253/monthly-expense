@@ -63,7 +63,7 @@ return [
     |
     */
 
-    'logo' => '<b>ME</b>LTE',
+    'logo' => '<b>ME</b>',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -296,32 +296,18 @@ return [
     'menu' => [
         // Navbar items:
         [
-            'type' => 'navbar-search',
-            'text' => 'search',
-            'topnav_right' => true,
-        ],
-        [
             'type' => 'fullscreen-widget',
             'topnav_right' => true,
         ],
 
         // Sidebar items:
         [
-            'type' => 'sidebar-menu-search',
-            'text' => 'search',
-        ],
-        [
-            'text' => 'blog',
-            'url' => 'admin/blog',
-            'can' => 'manage-blog',
-        ],
-        [
             'text' => 'Cost Manage',
             'icon' => 'fas fa-fw fa-user',
             'submenu' => [
                 [
                     'text' => 'Manage Cost',
-                    'url' => '#',
+                    'url' => 'costs',
                 ],
                 [
                     'text' => 'Mange Loan & Earn',
@@ -332,7 +318,7 @@ return [
         ],
         [
             'text' => 'Report',
-            'icon' => 'fa fa-report',
+            'icon' => 'fa fa-file-invoice',
             'submenu' => [
                 [
                     'text' => 'Month wise Report',
@@ -383,7 +369,7 @@ return [
 
     'plugins' => [
         'Datatables' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
@@ -403,7 +389,7 @@ return [
             ],
         ],
         'Select2' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
@@ -418,7 +404,7 @@ return [
             ],
         ],
         'Chartjs' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
@@ -428,7 +414,7 @@ return [
             ],
         ],
         'Sweetalert2' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
