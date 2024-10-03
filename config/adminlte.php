@@ -311,7 +311,7 @@ return [
                 ],
                 [
                     'text' => 'Mange Loan & Earn',
-                    'url' => '#',
+                    'url' => 'earn-loans',
                 ],
 
             ],

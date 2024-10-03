@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Cost;
+use App\Models\LoanEarn;
 use Illuminate\Http\Request;
 
-class CostController extends Controller
+class LoanEarnController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $costs = Cost::all();
-        return view('admin.cost.index', compact( 'costs'));
+        $loan_earns = LoanEarn::all();
+        return view('admin.loan-earn.index', compact('loan_earns'));
     }
 
     /**
@@ -29,12 +29,14 @@ class CostController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
-            'amount' => ['required', 'numeric'],
-            'reason' => ['required','string'],
+        $request->validate([
+            'date' => 'required',
+            'reason' =>'required',
+            'loan_amount' => 'required|numeric',
+            'type' => 'required',
         ]);
-        Cost::create($request->all());
-        return redirect()->route('costs.index')->with('success', 'Cost added successfully');
+        LoanEarn::create($request->all());
+        return redirect()->route('earn-loans.index')->with('success', 'Added successfully');
     }
 
     /**
@@ -66,8 +68,6 @@ class CostController extends Controller
      */
     public function destroy(string $id)
     {
-        Cost::destroy($id);
-        return redirect()->route('costs.index')->with('message', 'Cost deleted successfully');
+        //
     }
-
 }
