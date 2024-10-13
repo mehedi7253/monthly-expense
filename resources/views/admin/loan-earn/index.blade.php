@@ -56,6 +56,15 @@
                                     </tr>
                                 @endforeach
                             </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td></td>
+                                    <td>Total:</td>
+                                    <td>{{ number_format($loan->SUM('loan_amount'),2) }}</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tfoot>
                         </table>
                     </div>
                 </div>

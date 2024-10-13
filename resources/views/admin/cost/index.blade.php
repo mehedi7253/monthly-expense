@@ -36,7 +36,7 @@
                                     <tr>
                                         <td>{{ ++$i }}</td>
                                         <td>{{ $cost->created_at->format('d-m-Y') }}</td>
-                                        <td>{{ $cost->amount }}</td>
+                                        <td>{{ number_format($cost->amount,2) }}</td>
                                         <td>{{ $cost->reason }}</td>
                                         <td>
                                             <form action="{{ route('costs.destroy', $cost->id) }}" method="POST" style="display: inline;">
@@ -48,6 +48,15 @@
                                     </tr>
                                 @endforeach
                             </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td></td>
+                                    <td>Total:</td>
+                                    <td>{{ number_format($cost->SUM('amount'),2) }}</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tfoot>
                         </table>
                     </div>
                 </div>
