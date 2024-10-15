@@ -322,7 +322,7 @@ return [
             'submenu' => [
                 [
                     'text' => 'Month wise Report',
-                    'url' => '#',
+                    'url' => 'monthly-report',
                 ],
                 [
                     'text' => 'Year wise Report',
