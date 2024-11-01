@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\LoanEarn;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class LoanEarnController extends Controller
@@ -12,7 +13,7 @@ class LoanEarnController extends Controller
      */
     public function index()
     {
-        $loan_earns = LoanEarn::all();
+        $loan_earns = LoanEarn::whereMonth('created_at', Carbon::now()->month)->get();
         return view('admin.loan-earn.index', compact('loan_earns'));
     }
 

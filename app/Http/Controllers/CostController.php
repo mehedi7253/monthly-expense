@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cost;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class CostController extends Controller
@@ -12,7 +13,9 @@ class CostController extends Controller
      */
     public function index()
     {
-        $costs = Cost::all();
+        $costs = Cost::whereMonth('created_at', Carbon::now()->month)->get();
+        // $total = $costs->SUM('amount');
+        // return $total;
         return view('admin.cost.index', compact( 'costs'));
     }
 

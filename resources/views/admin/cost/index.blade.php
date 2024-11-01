@@ -52,7 +52,7 @@
                                 <tr>
                                     <td></td>
                                     <td>Total:</td>
-                                    <td>{{ number_format($cost->SUM('amount'),2) }}</td>
+                                    <td>{{ number_format($costs->SUM('amount'),2) }}</td>
                                     <td></td>
                                     <td></td>
                                 </tr>

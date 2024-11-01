@@ -60,7 +60,8 @@
                                 <tr>
                                     <td></td>
                                     <td>Total:</td>
-                                    <td>{{ number_format($loan->SUM('loan_amount'),2) }}</td>
+                                    <td>{{ number_format($loan_earns->SUM('loan_amount'),2) }}</td>
+                                    <td></td>
                                     <td></td>
                                     <td></td>
                                 </tr>
